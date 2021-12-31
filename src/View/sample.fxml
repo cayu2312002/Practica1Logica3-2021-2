@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="rootPane" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.Controller">
+   <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" spacing="10.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+      <Pane prefHeight="378.0" prefWidth="780.0">
+         <children>
+            <ImageView fitHeight="262.0" fitWidth="277.0" layoutX="259.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
+               <effect>
+                  <Blend />
+               </effect>
+               <Image url="@../images/portadamatriz.png" />
+            </ImageView>
+            <Text layoutX="66.0" layoutY="347.0" smooth="false" strokeType="OUTSIDE" strokeWidth="0.0" text="Práctica 1 - Punto 2" textAlignment="CENTER" wrappingWidth="649.0">
+               <font>
+                  <Font name="Times New Roman Bold" size="75.0" />
+               </font>
+               <fill>
+                  <RadialGradient focusAngle="34.29" focusDistance="-0.37209302325581395" radius="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.2542955326460481">
+                           <color>
+                              <Color />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.7594501718213058">
+                           <color>
+                              <Color red="0.5921052694320679" green="0.010964912362396717" blue="0.010964912362396717" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="1.0" green="0.6610339283943176" blue="0.11574073880910873" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </RadialGradient>
+               </fill>
+            </Text>
+         </children>
+      </Pane>
+      <ButtonBar prefHeight="40.0" prefWidth="200.0">
+         <buttons>
+            <Button fx:id="matriz_button" mnemonicParsing="false" onAction="#matriz_action" prefHeight="25.0" prefWidth="456.0" text="Ingresar matriz de MxN" />
+            <Button fx:id="suma_button" mnemonicParsing="false" onAction="#suma_action" text="Sumar dos matrices" />
+         </buttons>
+      </ButtonBar>
+      <HBox fx:id="HabilitarMatriz" alignment="TOP_CENTER" disable="true" prefHeight="35.0" prefWidth="780.0" visible="false">
+         <TextField fx:id="matriz_id" prefHeight="25.0" prefWidth="168.0" promptText="Digite la matriz en tripletas" />
+         <Button fx:id="dimensionesButton1" layoutX="308.0" layoutY="10.0" mnemonicParsing="false" onAction="#graficar_action" text="Ver matriz graficamente" textAlignment="CENTER" />
+         <Button fx:id="identidadButtom" mnemonicParsing="false" onAction="#identidad_action" prefHeight="25.0" prefWidth="170.0" text="Ver matriz identidad de MxN" textAlignment="CENTER" />
+      </HBox>
+      <HBox fx:id="HabilitarSuma" alignment="TOP_CENTER" prefHeight="46.0" prefWidth="780.0" visible="false">
+         <children>
+            <TextField fx:id="matrizA_id" promptText="Matriz A en tripletas" />
+            <TextField fx:id="matrizB_id" promptText="Matriz B en tripletas" />
+            <Button fx:id="dimensionesButton" mnemonicParsing="false" onAction="#sumar_action" text="Sumar matrices" textAlignment="CENTER" />
+         </children>
+      </HBox>
+   </VBox>
+</AnchorPane>

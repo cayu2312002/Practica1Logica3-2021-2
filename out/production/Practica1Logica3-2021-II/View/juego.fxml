@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="rootPane" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.juegoController">
+   <VBox layoutX="14.0" layoutY="14.0" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+      <Pane fx:id="panelPrincipal" prefHeight="475.0" prefWidth="780.0" />
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="200.0">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <Button fx:id="abrir_id" alignment="CENTER" mnemonicParsing="false" onAction="#comenzar_action" text="Abrir matriz:" />
+      </HBox>
+      <HBox alignment="TOP_RIGHT" prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <Button fx:id="cerrar_id" mnemonicParsing="false" onAction="#cerrar_action" text="Regresar al menú principal." textAlignment="RIGHT" />
+         </children>
+      </HBox>
+   </VBox>
+</AnchorPane>
